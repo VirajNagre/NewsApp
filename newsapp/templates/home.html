@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<h1 class='titl'><center> Home page </center></h1>
+{% for m in msg %}
+<div class='news-card'>
+{% if m.urlToImage %}
+<img src = {{ m.urlToImage }} ></img>
+{% endif %}
+
+<div><a href={{ m.url }}>
+<h3 > {{ m.title }} </h3>
+
+<a href={{ m.url }}> Read More </a>
+</a>
+</div>
+
+
+</div>
+{% endfor %}
+{% endblock %}
+

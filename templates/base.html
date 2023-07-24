@@ -1,0 +1,91 @@
+<html>
+<head>
+<style>
+
+*{
+font-family:Calibri;
+margin:0;
+}
+
+body{
+}
+
+.news-card{
+display:grid;
+width:70%;
+grid-template-columns:1fr 1fr;
+margin: 20px auto;
+grid-column-gap:20px;
+background:white;
+padding:20px;
+border-radius:20px;
+box-shadow: 1.8px 3.5px 3.5px hsl(0deg 0% 0% / 0.45);
+}
+
+.nav{
+background:white;
+color:#4285F4;
+padding:1%;
+box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.news-card a{
+text-decoration:none;
+margin-top:30px;
+}
+
+.news-card:hover{
+color: white;
+background: #4285F4;
+transform:scale(1.01);
+}
+
+a{
+text-decoration:none;
+color:grey;
+}
+
+.nav a{
+text-decoration:none;
+margin:10%;
+color:#808080;
+}
+
+.nav a:hover{
+color: #4285F4;
+}
+
+img{
+border-radius:10px;
+width: 500px;
+overflow:hidden;
+}
+
+.titl{
+margin-bottom:40px;
+color:white;
+background:coral;
+padding:18px;
+}
+
+.ab{
+margin:50px;
+color: #4285F4;
+width:40%;
+}
+
+</style>
+</head>
+
+<body>
+<center>
+<div class="nav">
+	<a href="{% url 'home' %}">HOME</a>
+	<a href="{% url 'about' %}">ABOUT</a>
+</div>
+</center>
+{% block content %}
+{% endblock %}
+
+</body>
+</html>
